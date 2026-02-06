@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2>HotelBooking</h2>
+        <button class="login-btn">Login</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find and Book a Room</h1>
+        <p>Book your stay easily with us</p>
+
+        <div class="booking-form">
+            <input type="date" id="checkin">
+            <input type="date" id="checkout">
+            <select id="roomType">
+                <option value="">Select Room Type</option>
+                <option value="Deluxe">Deluxe Room</option>
+                <option value="Triple">Triple Room</option>
+                <option value="Suite">Suite Room</option>
+            </select>
+            <button onclick="bookRoom()">Book Now</button>
+        </div>
+
+        <p id="message"></p>
+    </section>
+
+    <!-- Rooms -->
+    <section class="rooms">
+        <h2>Available Rooms</h2>
+
+        <div class="room-card">
+            <h3>Deluxe Room</h3>
+            <p>₹3500 / night</p>
+        </div>
+
+        <div class="room-card">
+            <h3>Triple Room</h3>
+            <p>₹4000 / night</p>
+        </div>
+
+        <div class="room-card">
+            <h3>Suite Room</h3>
+            <p>₹6000 / night</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
