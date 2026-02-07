@@ -1,58 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hotel Booking System</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Booking System — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Hotel<span>Book</span></a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#" class="active">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+        <button id="btn-login" class="btn-outline">Login</button>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h2>HotelBooking</h2>
-        <button class="login-btn">Login</button>
-    </nav>
-
-    <!-- Hero Section -->
+  <main>
     <section class="hero">
-        <h1>Find and Book a Room</h1>
-        <p>Book your stay easily with us</p>
-
-        <div class="booking-form">
-            <input type="date" id="checkin">
-            <input type="date" id="checkout">
-            <select id="roomType">
-                <option value="">Select Room Type</option>
-                <option value="Deluxe">Deluxe Room</option>
-                <option value="Triple">Triple Room</option>
-                <option value="Suite">Suite Room</option>
-            </select>
-            <button onclick="bookRoom()">Book Now</button>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Find & Book Your Perfect Stay</h1>
+          <p>Real-time availability, easy booking, secure payments — all in one place.</p>
         </div>
 
-        <p id="message"></p>
+        <form id="search-form" class="search-card" aria-label="Room search form">
+          <div class="row">
+            <label>
+              Check-in
+              <input type="date" id="checkin" required />
+            </label>
+            <label>
+              Check-out
+              <input type="date" id="checkout" required />
+            </label>
+            <label>
+              Guests
+              <select id="guests">
+                <option value="1">1 guest</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+              </select>
+            </label>
+            <label>
+              Room type
+              <select id="room-type">
+                <option value="any">Any</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="suite">Suite</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="row actions">
+            <button type="submit" class="btn-primary">Search Availability</button>
+            <button type="button" id="btn-clear" class="btn-link">Clear</button>
+          </div>
+
+          <p id="search-msg" class="muted"></p>
+        </form>
+      </div>
     </section>
 
-    <!-- Rooms -->
-    <section class="rooms">
-        <h2>Available Rooms</h2>
+    <section id="rooms" class="container section">
+      <h2>Featured Rooms</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://via.placeholder.com/600x360?text=Single+Room');"></div>
+          <div class="card-body">
+            <h3>Single Room</h3>
+            <p>Cozy single bed, complimentary breakfast, free Wi-Fi.</p>
+            <div class="card-row">
+              <span class="price">₹999/night</span>
+              <button class="btn-outline small">Book Now</button>
+            </div>
+          </div>
+        </article>
 
-        <div class="room-card">
-            <h3>Deluxe Room</h3>
-            <p>₹3500 / night</p>
-        </div>
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://via.placeholder.com/600x360?text=Double+Room');"></div>
+          <div class="card-body">
+            <h3>Double Room</h3>
+            <p>Comfortable double bed, AC, and city view.</p>
+            <div class="card-row">
+              <span class="price">₹1,499/night</span>
+              <button class="btn-outline small">Book Now</button>
+            </div>
+          </div>
+        </article>
 
-        <div class="room-card">
-            <h3>Triple Room</h3>
-            <p>₹4000 / night</p>
-        </div>
-
-        <div class="room-card">
-            <h3>Suite Room</h3>
-            <p>₹6000 / night</p>
-        </div>
+        <article class="card">
+          <div class="card-media" style="background-image:url('https://via.placeholder.com/600x360?text=Suite');"></div>
+          <div class="card-body">
+            <h3>Suite</h3>
+            <p>Spacious suite with living area, deluxe amenities.</p>
+            <div class="card-row">
+              <span class="price">₹2,999/night</span>
+              <button class="btn-outline small">Book Now</button>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="how" class="container section light">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <strong>1</strong>
+          <p>Search available rooms for your dates.</p>
+        </div>
+        <div class="step">
+          <strong>2</strong>
+          <p>Select a room and complete booking details.</p>
+        </div>
+        <div class="step">
+          <strong>3</strong>
+          <p>Make secure payment and receive confirmation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact & Policies</h2>
+      <p class="muted">Only registered users can make bookings. Admins manage room prices and availability. Payment and customer data are stored securely.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> HotelBook — All rights reserved</div>
+      <div class="socials">
+        <a href="#" aria-label="Twitter">Twitter</a> ·
+        <a href="#" aria-label="Facebook">Facebook</a> ·
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
