@@ -10,9 +10,8 @@ function bookRoom() {
     } else {
         msg.style.color = "lightgreen";
         msg.innerText =
-            "Booking Successful! " + room +
+            "(<_>) Booking Successful! " + room +
             " from " + checkin +
             " to " + checkout;
     }
-    document.write("Room Has Been Booked Successfully!!! (<_>)")
 }
