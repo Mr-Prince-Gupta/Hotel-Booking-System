@@ -4,7 +4,6 @@ body {
     background: #f5f7fb;
 }
 
-/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,47 +12,38 @@ body {
     background: white;
 }
 
-.logo {
-    font-weight: bold;
-    color: #2563eb;
-}
-
-.nav-links {
+.navbar ul {
+    list-style: none;
     display: flex;
     gap: 20px;
-    list-style: none;
 }
 
-.login-btn {
-    padding: 8px 18px;
+.logo {
+    font-size: 20px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.login {
+    padding: 8px 16px;
     background: #2563eb;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
-/* HERO */
 .hero {
     background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
     background-size: cover;
-    background-position: center;
-    height: 400px;
-    position: relative;
-}
-
-.overlay {
-    background: rgba(0,0,0,0.5);
     color: white;
-    height: 100%;
-    padding-top: 80px;
+    padding: 80px;
     text-align: center;
 }
 
 .search-box {
     background: white;
     padding: 15px;
-    margin: 30px auto;
-    width: 70%;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
@@ -70,7 +60,6 @@ body {
     border: none;
 }
 
-/* ROOMS */
 .rooms {
     padding: 40px;
     text-align: center;
@@ -93,7 +82,6 @@ body {
     width: 100%;
     height: 170px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
 }
 
 .room-card button {
@@ -102,21 +90,5 @@ body {
     background: #2563eb;
     color: white;
     border: none;
-    border-radius: 6px;
-}
-
-/* CTA */
-.cta {
-    background: linear-gradient(90deg, #2563eb, #1e40af);
-    color: white;
-    text-align: center;
-    padding: 40px;
-}
-
-.cta button {
-    background: white;
-    color: #2563eb;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
+    border-radius: 5px;
 }
