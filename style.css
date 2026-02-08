@@ -72,10 +72,13 @@ body {
 
 /* ROOMS */
 .rooms h2 {
-    background: #6b7280;
-    color: white;
-    font-weight: bold;
+    margin: 0;              /* default upar-neeche ka gap hata dega */
+    padding: 15px 0;        /* thoda space andar se */
+    background: #9ca3af;    /* grey strip */
+    color: black;
+    text-align: center;
 }
+
 
 
 .room-container {
