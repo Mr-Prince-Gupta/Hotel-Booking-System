@@ -14,5 +14,5 @@ function bookRoom() {
             " from " + checkin +
             " to " + checkout;
     }
+    document.write("Room Has Been Booked Successfully!!! (<_>)")
 }
-document.write("Room Has Been Booked Successfully!!! (<_>)")
