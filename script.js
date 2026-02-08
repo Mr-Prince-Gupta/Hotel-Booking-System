@@ -15,3 +15,4 @@ function bookRoom() {
             " to " + checkout;
     }
 }
+document.write("Room Has Been Booked Successfully!!! (<_>)")
