@@ -71,10 +71,8 @@ body {
 }
 
 /* ROOMS */
-.rooms h2 {
-    background: #6b7280;
-    color: white;
-    font-weight: bold;
+.rooms {
+    padding: 40px;
     text-align: center;
 }
 
